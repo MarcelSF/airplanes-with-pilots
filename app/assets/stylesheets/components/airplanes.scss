@@ -1,0 +1,27 @@
+$sky: #78CDD7;
+$metal: #30343F;
+
+body {
+  color: $metal;
+}
+
+.airplane-card {
+  margin: 32px;
+  padding: 16px;
+  border: 1px solid $sky;
+  text-align: center;
+
+  .plane-image {
+    height: 250px;
+    margin-bottom: 8px;
+  }
+}
+
+.hangar {
+  text-align: center;
+}
+
+.plane-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}

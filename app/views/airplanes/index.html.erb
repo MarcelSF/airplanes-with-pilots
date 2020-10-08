@@ -1,12 +1,12 @@
-<h1 class="hangar">Planes in the hangar!</h1>
+<h1 class="hangar my-3">🛫 Planes in the hangar! 🛩</h1>
+  <div class="plane-grid">
+    <% @airplanes.each do |airplane| %>
+      <div class="airplane-card">
+        <img src=<%= airplane.image_url %> alt="✈️" class="plane-image">
+        <p>Model: <%= airplane.model %> </p>
+        <p>Crew: <%= airplane.crew %></p>
+      </div>
+    <% end %>
+  </div>
 
-<div class="plane-index">
-  <% @airplanes.each do |airplane| %>
-    <div class="airplane-card">
-      <img src=<%= airplane.image_url %> alt="✈️" class="plane-image">
-      <p>Model: <%= airplane.model %> </p>
-      <p>Crew: <%= airplane.crew %></p>
-    </div>
-  <% end %>
-</div>
 
