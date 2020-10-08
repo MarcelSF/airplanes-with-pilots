@@ -1,11 +1,9 @@
-<div class="container">
-  <%= form_for(@airplane) do |f| %>
-  <%= f.label :model %>
-  <%= f.text_field :model %>
-  <%= f.label :crew %>
-  <%= f.text_field :crew %>
-  <%= f.label :image_url %>
-  <%= f.text_field :image_url %>
-  <%= f.submit "Park airplane in the hangar" %>
+<div class="container my-3">
+  <h1>Fill out the form below to park a new plane in our hangar 🛬</h1>
+  <%= simple_form_for(@airplane) do |f| %>
+    <%= f.input :model %>
+    <%= f.input :crew %>
+    <%= f.input :image_url %>
+    <%= f.submit "Park a new Airplane" %>
   <% end %>
 </div>
