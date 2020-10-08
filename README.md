@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Basic rails CRUD app to add airplanes to a hangar.
 
-Things you may want to cover:
+Classic rails project. Run bundle install and yarn install
 
-* Ruby version
+rails db:create db:migrate db:seed -> You should have a garage with 3 airplanes inside.
 
-* System dependencies
+OBJECTIVES:
 
-* Configuration
+Implement Update and Destroy functionality to the Airplanes Controller. Remember:
 
-* Database creation
+Routes -> Controller -> View
 
-* Database initialization
+Yould write the correct routes, create the controller using 'DRY' principles (remember before_action ?) and setup a cool reusable view.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
