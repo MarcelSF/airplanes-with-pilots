@@ -1,14 +1,14 @@
 <h1 class="hangar my-3">🛫 Planes in the hangar! 🛩</h1>
   <div class="plane-grid">
     <% @airplanes.each do |airplane| %>
-
-        <div class="airplane-card">
-          <img src=<%= airplane.image_url %> alt="✈️" class="plane-image">
-          <p>Hangar spot number: <%= airplane.id%></p>
-          <p>Model: <%= airplane.model %> </p>
-          <p>Crew: <%= airplane.crew %></p>
-        </div>
-
+      <%= link_to airplane_path(airplane) do %>
+          <div class="airplane-card">
+            <img src=<%= airplane.image_url %> alt="✈️" class="plane-image">
+            <p>Hangar spot number: <%= airplane.id%></p>
+            <p>Model: <%= airplane.model %> </p>
+            <p>Crew: <%= airplane.crew %></p>
+          </div>
+      <% end %>
     <% end %>
   </div>
 
