@@ -7,7 +7,7 @@
       <p>Model: <%= @airplane.model %> </p>
       <div class="airplane-bottom">
         <%= link_to 'Update airplane', edit_airplane_path(@airplane), class: 'btn btn-info' %>
-        <%= link_to 'Remove from hangar', airplane_path(@airplane), method: :delete, class: 'btn btn-info' %>
+        <%= link_to 'Remove from hangar', airplane_path(@airplane), method: :delete, class: 'btn btn-danger' %>
       </div>
     </div>
 </div>
