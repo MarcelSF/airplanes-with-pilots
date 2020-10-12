@@ -5,7 +5,6 @@
       <img src=<%= @airplane.image_url %> alt="✈️" class="plane-image">
       <p>Hangar spot number: <%= @airplane.id%></p>
       <p>Model: <%= @airplane.model %> </p>
-      <p>Crew: <%= @airplane.crew %></p>
       <div class="airplane-bottom">
         <%= link_to 'Update airplane', edit_airplane_path(@airplane), class: 'btn btn-info' %>
         <%= link_to 'Remove from hangar', airplane_path(@airplane), method: :delete, class: 'btn btn-info' %>

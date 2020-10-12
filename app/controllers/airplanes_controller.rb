@@ -37,6 +37,6 @@ class AirplanesController < ApplicationController
   end
 
   def airplane_params
-    params.require(:airplane).permit(:model, :crew, :image_url)
+    params.require(:airplane).permit(:model, :image_url)
   end
 end
