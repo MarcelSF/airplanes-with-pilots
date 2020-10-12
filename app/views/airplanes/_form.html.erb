@@ -1,0 +1,13 @@
+<div class="container my-3">
+  <h1>Fill out the form below to park a new plane in our hangar 🛬</h1>
+  <%= simple_form_for(@airplane) do |f| %>
+    <%= f.input :model %>
+    <%= f.input :crew %>
+    <%= f.input :image_url %>
+    <% if @airplane.new_record? %>
+      <%= f.submit "Park a new irplane", class: 'btn btn-info' %>
+    <% else %>
+      <%= f.submit "Update your airplane!", class: 'btn btn-info' %>
+    <% end %>
+  <% end %>
+</div>
