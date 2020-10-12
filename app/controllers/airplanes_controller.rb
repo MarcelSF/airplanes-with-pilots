@@ -13,16 +13,22 @@ class AirplanesController < ApplicationController
 
   def create
     @airplane = Airplane.new(airplane_params)
-    @airplane.save
-    redirect_to airplanes_path
+    if @airplane.save
+      redirect_to airplanes_path
+    else
+      render 'new'
+    end
   end
 
   def edit
   end
 
   def update
-    @airplane.update(airplane_params)
-    redirect_to @airplane
+    if @airplane.update(airplane_params)
+      redirect_to @airplane
+    else
+      render :edit
+    end
   end
 
   def destroy
