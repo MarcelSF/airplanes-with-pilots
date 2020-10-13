@@ -5,5 +5,5 @@ Rails.application.routes.draw do
     resources :crew_members, only: [:new, :create]
   end
 
-  resources :crew_members, only: [:edit, :update, :destroy]
+  resources :crew_members, only: [:destroy]
 end

@@ -9,6 +9,18 @@
       <div class="airplane-bottom">
         <%= link_to 'Update airplane', edit_airplane_path(@airplane), class: 'btn btn-info' %>
         <%= link_to 'Remove from hangar', airplane_path(@airplane), method: :delete, class: 'btn btn-danger' %>
+        <%= link_to 'Add a crew member', new_airplane_crew_member_path(@airplane), class: 'btn btn-secondary' %>
       </div>
+      <% unless @airplane.crew_members.empty? %>
+          <h3 class="my-3">Crew for this plane:</h3>
+          <div class="crew-grid">
+            <% @airplane.crew_members.each do |crew|%>
+              <div class="crew-member border rounded p-3">
+                <p> Name: <%= crew.name%> </p>
+                <p>Position: <%= crew.position %> </p>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
     </div>
 </div>
