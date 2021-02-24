@@ -2,6 +2,9 @@ class AirplanesController < ApplicationController
   before_action :set_airplane, only: [:show, :edit, :update, :destroy]
   def index
     @airplanes = Airplane.all
+    filtering_params(params).each do |key, value|
+      @airplanes = @airplanes.send("filter_by_#{key}", value) if value.present?
+    end
   end
 
   def show
@@ -43,6 +46,10 @@ class AirplanesController < ApplicationController
   end
 
   def airplane_params
-    params.require(:airplane).permit(:model, :image_url)
+    params.require(:airplane).permit(:model, :image_url, :category, :engines)
+  end
+
+  def filtering_params(params)
+    params.slice(:category, :engines, :speed)
   end
 end

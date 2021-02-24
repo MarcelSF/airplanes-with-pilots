@@ -1,4 +1,36 @@
 <h1 class="hangar my-3">🛫 Planes in the hangar! 🛩</h1>
+  <div class="search">
+  <%= link_to 'Clear Filters', airplanes_path, class: 'btn btn-info mb-3' %>
+    <%= params %>
+    <%= form_tag airplanes_path, method: :get do %>
+      <%= text_field_tag :model,
+        params[:model],
+        class: "form-control",
+        placeholder: "Find an airplane (By model name)"
+      %>
+
+      <%= number_field_tag :speed,
+        params[:speed],
+        class: "form-control",
+        placeholder: "Speed (in km/h)"
+      %>
+
+      <%= number_field_tag :engines,
+        params[:engines],
+        class: "form-control",
+        placeholder: "Number of engines"
+      %>
+
+      <%= select_tag :category,
+        options_for_select(Airplane::CATEGORIES),
+        include_blank: true,
+        class: 'form-control',
+        placeholder: "Category"%>
+
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+
   <div class="plane-grid">
     <%= render @airplanes %>
   </div>

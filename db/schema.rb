@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_13_210536) do
+ActiveRecord::Schema.define(version: 2021_02_24_195943) do
 
   create_table "airplanes", force: :cascade do |t|
     t.string "model"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 2020_10_13_210536) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "speed", default: 100
     t.string "maker"
+    t.string "category"
+    t.integer "engines"
   end
 
   create_table "crew_members", force: :cascade do |t|
