@@ -1,7 +1,6 @@
 <h1 class="hangar my-3">🛫 Planes in the hangar! 🛩</h1>
   <div class="search">
   <%= link_to 'Clear Filters', airplanes_path, class: 'btn btn-info mb-3' %>
-    <%= params %>
     <%= form_tag airplanes_path, method: :get do %>
       <%= text_field_tag :model,
         params[:model],

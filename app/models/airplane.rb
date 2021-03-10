@@ -2,6 +2,9 @@ class Airplane < ApplicationRecord
   validates :model, presence: true
   has_many :crew_members
 
+  acts_as_taggable_on :tags
+  acts_as_taggable_on :categories, :engines
+
   CATEGORIES = ['Military', 'Civilian', 'Experimental']
 
 
